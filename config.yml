@@ -1,0 +1,119 @@
+# Source: https://github.com/mikenobbs/Kometa-Configs/blob/main/configs
+
+plex:
+  url: http://plex:32400/
+  token: <<PLEX_API_TOKEN>>
+  timeout: 120
+  clean_bundles: true
+  empty_trash: true
+  optimize: true
+  db_cache:
+tautulli:
+  url: http://tautulli:8181
+  apikey: <<TAUTULLI_API_KEY>>
+tmdb:
+  apikey: <<TMDB_API_KEY>>
+  language: en
+  cache_expiration: 60
+  region: FR
+omdb:
+  apikey: <<OMDB_API_KEY>>
+  cache_expiration: 60
+#mdblist:
+#  apikey: 
+#  cache_expiration: 60
+
+# Documentation provides a tool to fill those fields
+# https://kometa.wiki/en/latest/config/trakt/#usage
+trakt:
+  client_id: <<TRAKT_CLIENT_ID>>
+  client_secret: <<TRAKT_CLIENT_SECRET>>
+  authorization:
+    access_token: <<TRAKT_ACCESS_TOKEN>>
+    token_type: Bearer
+    expires_in: 7889237
+    refresh_token: <<TRAKT_REFRESH_TOKEN>>
+    scope: public
+    created_at: 1735812966
+  pin:
+
+libraries:
+  Movies:
+    collection_files:
+      - repo: movies/awards
+        asset_directory: /config/config/assets/awards
+      - repo: movies/trakt
+        asset_directory: /config/config/assets/collections
+      - repo: movies/seasonal
+        asset_directory: /config/config/assets/seasonal
+    operations:
+      assets_for_all: true
+      split_duplicates: false
+      metadata_backup:
+        path: config/metadata/movies.yml
+        sync_tags: true
+        add_blank_entries: true
+    settings:
+      asset_directory: /config/config/assets/movies
+  TV Shows:
+    collection_files:
+      - repo: tv/trakt
+        asset_directory: /config/config/assets/collections
+      - repo: tv/seasonal
+        asset_directory: /config/config/assets/seasonal
+    operations:
+      assets_for_all: true
+      split_duplicates: false
+      item_tmdb_season_titles: true
+      metadata_backup:
+        path: /config/config/metadata/tv.yml
+        sync_tags: true
+        add_blank_entries: true
+    settings:
+      asset_directory: /config/config/assets/tv
+settings:
+  cache: true
+  cache_expiration: 60
+  asset_folders: true
+  show_missing_assets: false
+  create_asset_folders: true
+  sync_mode: sync
+  show_unmanaged: true
+  show_filtered: true
+  show_missing: true
+  save_missing: true
+  run_again_delay: 2
+  missing_only_released: true
+  delete_below_minimum: false
+  tvdb_language: default
+  only_filter_missing: false
+  delete_not_scheduled: false
+  show_missing_season_assets: false
+  ignore_ids:
+  ignore_imdb_ids:
+  asset_depth: 2
+  show_options: false
+  dimensional_asset_rename: true
+  download_url_assets: true
+  minimum_items: 2
+  verify_ssl: true
+  default_collection_order: release
+  item_refresh_delay: 0
+  playlist_sync_to_users: false
+  show_missing_episode_assets: false
+  show_asset_not_needed: false
+  prioritize_assets: true
+  playlist_report: true
+  check_nightly: true
+  show_unconfigured: true
+  playlist_exclude_users:
+  asset_directory:
+  run_order:
+  - operations
+  - metadata
+  - collections
+  - overlays
+  overlay_filetype: jpg
+  overlay_quality:
+  overlay_artwork_filetype: jpg
+  overlay_artwork_quality:
