@@ -1,0 +1,35 @@
+######################################################
+#                Seasonal Collections                #
+######################################################
+
+templates:
+  seasonal:
+    optional:
+      - trakt
+      - imdb 
+    smart_label:
+      sort_by: title.asc
+      all:
+        label: <<smart_label>>
+    trakt_list: <<trakt>>
+    imdb_list: https://www.imdb.com/<<imdb>>
+    schedule: range(<<schedule>>)
+    summary: >-
+            A collection of <<season>> themed movies, as well as movies that are associated with this time of year. 
+
+            PLEASE NOTE, this is a timed collection and will be automatically removed at the end of the holiday.
+    visible_library: true
+    visible_home: true
+    visible_shared: true
+    delete_not_scheduled: true
+    sort_title: ++++++<<collection_name>>
+
+collections:
+  Christmas:
+    template: 
+      name: seasonal
+      season: Christmas
+      schedule: 11/01-12/31
+      trakt: 
+        - https://trakt.tv/users/k0meta/lists/christmas-extravaganza-non-tv-movie
+        - https://trakt.tv/users/ubjeckle/lists/christmas-movies

@@ -1,0 +1,35 @@
+######################################################
+#                Seasonal Collections                #
+######################################################
+
+templates:
+  seasonal:
+    optional:
+      - trakt
+      - imdb
+    smart_label:
+      sort_by: episode_release.desc
+      all:
+        episode_label: <<smart_label>>
+    builder_level: episode
+    trakt_list: <<trakt>>
+    imdb_list: https://www.imdb.com/<<imdb>>
+    schedule: range(<<schedule>>)
+    summary: >-
+            A collection of <<season>> themed episodes and TV Shows.
+            
+            PLEASE NOTE, this is a timed collection and will be automatically removed at the end of the holiday.
+    visible_home: true
+    visible_shared: true
+    delete_not_scheduled: true
+    sort_title: ++++++<<collection_name>
+  
+collections: 
+  Christmas:
+    template: 
+      name: seasonal
+      schedule: 11/01-12/31
+      season: Christmas
+      trakt: 
+        - https://trakt.tv/users/ashleyangel/lists/christmas-episodes
+        - https://trakt.tv/users/blazin887/lists/christmas-episodes
