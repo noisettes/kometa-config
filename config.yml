@@ -50,7 +50,7 @@ libraries:
       assets_for_all: true
       split_duplicates: false
       metadata_backup:
-        path: config/metadata/movies.yml
+        path: /config/config/metadata/movies.yml
         sync_tags: true
         add_blank_entries: true
     settings:
