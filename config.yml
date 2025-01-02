@@ -72,6 +72,7 @@ libraries:
     settings:
       asset_directory: /config/config/assets/tv
 settings:
+  custom_repo: https://raw.githubusercontent.com/noisettes/kometa-config/main/config/
   cache: true
   cache_expiration: 60
   asset_folders: true
