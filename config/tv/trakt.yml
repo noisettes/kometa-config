@@ -5,8 +5,8 @@
 templates:
   trakt:
     trakt_list_details: <<trakt_user_lists>>
-  trakt_people:
-    trakt_list_details: <<trakt_people_list>>
+  trakt_liked:
+    trakt_list_details: <<value>>
 
 dynamic_collections:
   #Create collections based on the Trakt lists associated with the authenticated user.
@@ -20,9 +20,7 @@ dynamic_collections:
       - Favorites
       #- Watchlist
       
-  #Create collections based on the Trakt lists from other people.
-  Trakt People Lists:
-    template: trakt_people
-    type: trakt_people_list
-    data:
-      - https://trakt.tv/users/inaneswine/lists/miniseries
+  #Create collections based on the liked Trakt lists.
+  Trakt Liked Lists:
+    template: trakt_liked
+    type: trakt_liked_lists
