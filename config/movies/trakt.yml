@@ -5,6 +5,8 @@
 templates:
   trakt:
     trakt_list_details: <<trakt_user_lists>>
+  trakt_liked:
+    trakt_list_details: <<value>>
 
 dynamic_collections:
   #Create collections based on the Trakt lists associated with the authenticated user.
@@ -17,3 +19,9 @@ dynamic_collections:
       - Sonarr
       - Favorites
       #- Watchlist
+      
+  #Create collections based on the liked Trakt lists.
+  Trakt Liked Lists:
+    template: trakt_liked
+    type: trakt_liked_lists
+    data: me
