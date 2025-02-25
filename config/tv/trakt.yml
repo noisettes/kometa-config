@@ -5,6 +5,8 @@
 templates:
   trakt:
     trakt_list_details: <<trakt_user_lists>>
+  trakt_people:
+    trakt_list_details: <<trakt_people_list>>
 
 dynamic_collections:
   #Create collections based on the Trakt lists associated with the authenticated user.
@@ -17,3 +19,10 @@ dynamic_collections:
       - Sonarr
       - Favorites
       #- Watchlist
+      
+  #Create collections based on the Trakt lists from other people.
+  Trakt People Lists:
+    template: trakt_people
+    type: trakt_people_list
+    data:
+      - https://trakt.tv/users/inaneswine/lists/miniseries
