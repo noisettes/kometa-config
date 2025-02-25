@@ -24,3 +24,4 @@ dynamic_collections:
   Trakt Liked Lists:
     template: trakt_liked
     type: trakt_liked_lists
+    data: me
