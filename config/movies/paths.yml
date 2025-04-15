@@ -10,3 +10,9 @@ collections:
       all:
         filepath: /data/movies/_broadcasts
     sort_by: release.desc
+
+  Concerts:
+    plex_search:
+      all:
+        filepath: /data/movies/_concerts
+    sort_by: release.desc
