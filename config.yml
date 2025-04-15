@@ -46,6 +46,8 @@ libraries:
         asset_directory: /config/config/assets/collections
       - repo: movies/seasonal
         asset_directory: /config/config/assets/seasonal
+      - repo: movies/paths
+        asset_directory: /config/config/assets/paths
     operations:
       assets_for_all: true
       split_duplicates: false

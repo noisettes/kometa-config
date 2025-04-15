@@ -1,0 +1,12 @@
+collections:
+  Spectacles:
+    plex_search:
+      all:
+        filepath: /data/movies/_spectacles
+    sort_by: release.desc
+
+  Émissions:
+    plex_search:
+      all:
+        filepath: /data/movies/_broadcasts
+    sort_by: release.desc
