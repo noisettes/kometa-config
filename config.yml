@@ -120,3 +120,4 @@ settings:
   overlay_quality:
   overlay_artwork_filetype: jpg
   overlay_artwork_quality:
+  show_unfiltered: false
