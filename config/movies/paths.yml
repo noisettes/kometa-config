@@ -3,16 +3,13 @@ collections:
     plex_all: true
     filters:
       - filepath.regex: '/data/movies/_spectacles/'
-    sort_by: release.desc
 
   Émissions:
     plex_all: true
     filters:
       - filepath.regex: '/data/movies/_broadcasts/'
-    sort_by: release.desc
 
   Concerts:
     plex_all: true
     filters:
       - filepath.regex: '/data/movies/_concerts/'
-    sort_by: release.desc
