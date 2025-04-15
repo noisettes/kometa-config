@@ -38,7 +38,7 @@ trakt:
   pin:
 
 libraries:
-  Movies:
+  Films:
     collection_files:
       - repo: movies/awards
         asset_directory: /config/config/assets/awards
@@ -57,7 +57,7 @@ libraries:
         add_blank_entries: true
     settings:
       asset_directory: /config/config/assets/movies
-  TV Shows:
+  Séries TV:
     collection_files:
       - repo: tv/trakt
         asset_directory: /config/config/assets/collections
