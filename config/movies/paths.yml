@@ -1,18 +1,18 @@
 collections:
   Spectacles:
-    plex_search:
-      all:
-        filepath: /data/movies/_spectacles
+    plex_all: true
+    filters:
+      - filepath.regex: '/data/movies/_spectacles/'
     sort_by: release.desc
 
   Émissions:
-    plex_search:
-      all:
-        filepath: /data/movies/_broadcasts
+    plex_all: true
+    filters:
+      - filepath.regex: '/data/movies/_broadcasts/'
     sort_by: release.desc
 
   Concerts:
-    plex_search:
-      all:
-        filepath: /data/movies/_concerts
+    plex_all: true
+    filters:
+      - filepath.regex: '/data/movies/_concerts/'
     sort_by: release.desc
