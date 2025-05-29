@@ -2,4 +2,4 @@ collections:
   Masterclass:
     plex_all: true
     filters:
-      - filepath.regex: '/data/tvshows/_masterclass/'
+      - filepath.regex: '/data/tvshows/MasterClass:'
